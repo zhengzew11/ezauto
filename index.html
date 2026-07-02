@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EzAuto | 车易行 - 国际汽车贸易</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .hero { background: linear-gradient(rgba(0, 40, 85, 0.85), rgba(0, 40, 85, 0.85)), url('https://picsum.photos/1920/1080?cars') center/cover; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- 导航栏 -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="text-3xl font-bold text-blue-700">Ez<span class="text-orange-500">Auto</span></div>
+        <h1 class="text-2xl font-bold text-blue-900">车易行</h1>
+      </div>
+      <div class="flex gap-2 text-sm font-medium">
+        <button onclick="switchLang('zh')" class="lang-btn px-5 py-2 rounded-lg hover:bg-blue-100 active">中文</button>
+        <button onclick="switchLang('en')" class="lang-btn px-5 py-2 rounded-lg hover:bg-blue-100">EN</button>
+        <button onclick="switchLang('ru')" class="lang-btn px-5 py-2 rounded-lg hover:bg-blue-100">RU</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区 -->
+  <section id="home" class="hero h-screen flex items-center text-white pt-20">
+    <div class="max-w-6xl mx-auto text-center px-6">
+      <h2 id="slogan" class="text-5xl md:text-7xl font-bold mb-6">车行天下，易行全球</h2>
+      <p id="slogan-sub" class="text-2xl mb-10">您的可靠全球汽车贸易伙伴</p>
+      <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-12 py-5 rounded-full text-xl font-semibold">立即咨询</a>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 id="about-title" class="text-4xl font-bold text-center mb-12 text-blue-900">关于我们</h2>
+      <div id="about-text" class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        <!-- 内容由JS填充 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 主要品牌 -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 id="brands-title" class="text-4xl font-bold text-center mb-12 text-blue-900">合作品牌</h2>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center">
+        <div class="font-semibold">Great Wall</div>
+        <div class="font-semibold">Chery</div>
+        <div class="font-semibold">Dongfeng</div>
+        <div class="font-semibold">Voyah</div>
+        <div class="font-semibold">M-Hero</div>
+        <div class="font-semibold">Yipai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-20 bg-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 id="contact-title" class="text-4xl font-bold mb-12">联系我们</h2>
+      <div class="grid md:grid-cols-2 gap-12 text-left max-w-2xl mx-auto">
+        <div>
+          <p class="mb-6"><i class="fas fa-whatsapp text-2xl mr-4"></i> <strong>WhatsApp：</strong> +86 152 3712 4896</p>
+          <p class="mb-6"><i class="fas fa-envelope text-2xl mr-4"></i> <strong>Email：</strong> info@ezauto.cn</p>
+        </div>
+        <div>
+          <p class="mb-6"><i class="fas fa-map-marker-alt text-2xl mr-4"></i> <strong>地址：</strong> 中国河南郑州</p>
+          <p><i class="fab fa-telegram text-2xl mr-4"></i> <strong>Telegram：</strong> <a href="https://t.me/ChinaAutoPrices" class="underline">t.me/ChinaAutoPrices</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-400 py-10 text-center">
+    <p>© 2026 EzAuto | 车易行 All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active', 'bg-blue-100'));
+
+      if (lang === 'zh') {
+        document.getElementById('slogan').innerHTML = '车行天下，易行全球';
+        document.getElementById('slogan-sub').innerHTML = '您的可靠全球汽车贸易伙伴';
+        document.getElementById('about-title').innerHTML = '关于我们';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">车易行汽车进出口（河南）有限公司 成立于2017年，总部位于河南。</p>
+          <p class="mb-6">公司专注于多品牌汽车运营、整车销售、售后服务、仓储物流及国际贸易。</p>
+          <p class="mb-6">主要品牌：长城、奇瑞、东风（岚图、猛士、奕派）。</p>
+          <p class="mb-6">年均销量 4560 台，年均销售额 6.5 亿元，年均利润 0.97 亿元。</p>
+          <p>服务网络覆盖郑州、洛阳、濮阳等地，提供购车咨询、金融按揭、保险上牌、维修保养、精品加装、二手车置换等全生命周期服务。</p>
+        `;
+        document.getElementById('brands-title').innerHTML = '合作品牌';
+        document.getElementById('contact-title').innerHTML = '联系我们';
+      } 
+      else if (lang === 'en') {
+        document.getElementById('slogan').innerHTML = 'Drive the World, Easy Global Mobility';
+        document.getElementById('slogan-sub').innerHTML = 'Your Reliable Global Auto Trade Partner';
+        document.getElementById('about-title').innerHTML = 'About Us';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">EZ-AUTO Automobile Import and Export (Henan) Co., Ltd. was founded in 2017 and is headquartered in Henan Province.</p>
+          <p class="mb-6">We specialize in multi-brand vehicle operations, complete vehicle sales, after-sales service, warehousing & logistics, and international trade.</p>
+          <p class="mb-6">Main brands: Great Wall, Chery, Dongfeng (Voyah, M-Hero, Yipai).</p>
+          <p class="mb-6">Annual average sales: 4,560 units | Revenue: 650 million RMB | Profit: 97 million RMB.</p>
+          <p>We provide full life-cycle services including purchase consultation, financing, insurance, maintenance, accessories, and used car trade-in.</p>
+        `;
+        document.getElementById('brands-title').innerHTML = 'Our Brands';
+        document.getElementById('contact-title').innerHTML = 'Contact Us';
+      } 
+      else if (lang === 'ru') {
+        document.getElementById('slogan').innerHTML = 'Автомобили по всему миру — легко и глобально';
+        document.getElementById('slogan-sub').innerHTML = 'Ваш надежный глобальный партнер';
+        document.getElementById('about-title').innerHTML = 'О компании';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">ООО «EZ-AUTO Автомобильный Импорт и Экспорт (Хэнань)» основана в 2017 году в провинции Хэнань.</p>
+          <p class="mb-6">Компания занимается мультибрендовой торговлей автомобилями, продажей готовых авто, послепродажным обслуживанием, складской логистикой и международной торговлей.</p>
+          <p class="mb-6">Основные бренды: Great Wall, Chery, Dongfeng (Voyah, M-Hero, Yipai).</p>
+          <p class="mb-6">Среднегодовой объём продаж: 4560 автомобилей<br>Выручка: 650 млн юаней<br>Прибыль: 97 млн юаней.</p>
+          <p>Предоставляем полный комплекс услуг жизненного цикла автомобиля.</p>
+        `;
+        document.getElementById('brands-title').innerHTML = 'Наши бренды';
+        document.getElementById('contact-title').innerHTML = 'Контакты';
+      }
+    }
+
+    window.onload = () => switchLang('zh');
+  </script>
+</body>
+</html>
