@@ -41,17 +41,18 @@
     .stat-card:hover {
       transform: translateY(-8px);
     }
-    /* 成就数据文字适配 - 特别优化俄语和法语 */
-    .stat-text {
-      font-size: 1.1rem;
-      line-height: 1.3;
-      min-height: 3.2rem;
+    /* 服务范围特殊优化 - 解决俄语和法语超长问题 */
+    #stat4 {
+      font-size: 1.05rem;
+      line-height: 1.25;
+      min-height: 3rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0 4px;
     }
-    .ru .stat-text, .fr .stat-text {
-      font-size: 0.95rem;
+    .ru #stat4, .fr #stat4 {
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -153,7 +154,7 @@
         </div>
         <div class="stat-card bg-white border border-gray-100 rounded-2xl p-8 text-center">
           <div class="text-5xl font-bold text-blue-600 mb-3" id="stat4-value">Global</div>
-          <div id="stat4" class="text-xl font-medium stat-text">Service Range</div>
+          <div id="stat4" class="text-xl font-medium">Service Range</div>
         </div>
       </div>
     </div>
