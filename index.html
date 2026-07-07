@@ -41,18 +41,16 @@
     .stat-card:hover {
       transform: translateY(-8px);
     }
-    /* 关键修复：成就数据顶部大字适配长单词 */
-    .stat-value {
-      font-size: 2.25rem;
+    /* 强制缩小俄语和法语的长单词 */
+    #stat4-value {
+      font-size: 2.1rem;
       line-height: 1.1;
-      font-weight: 700;
-      min-height: 2.8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-    .ru .stat-value, .fr .stat-value {
-      font-size: 1.85rem;
+    .ru #stat4-value {
+      font-size: 1.65rem !important;
+    }
+    .fr #stat4-value {
+      font-size: 1.85rem !important;
     }
   </style>
 </head>
