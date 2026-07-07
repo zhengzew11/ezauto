@@ -41,18 +41,18 @@
     .stat-card:hover {
       transform: translateY(-8px);
     }
-    /* 服务范围特殊优化 - 解决俄语和法语超长问题 */
-    #stat4 {
-      font-size: 1.05rem;
-      line-height: 1.25;
-      min-height: 3rem;
+    /* 关键修复：成就数据顶部大字适配长单词 */
+    .stat-value {
+      font-size: 2.25rem;
+      line-height: 1.1;
+      font-weight: 700;
+      min-height: 2.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 4px;
     }
-    .ru #stat4, .fr #stat4 {
-      font-size: 0.9rem;
+    .ru .stat-value, .fr .stat-value {
+      font-size: 1.85rem;
     }
   </style>
 </head>
