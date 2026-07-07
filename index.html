@@ -41,6 +41,14 @@
     .stat-card:hover {
       transform: translateY(-8px);
     }
+    /* 俄语等长文本适配 */
+    .stat-text {
+      font-size: 1.05rem;
+      line-height: 1.35;
+    }
+    .ru .stat-text {
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body class="font-sans">
@@ -70,9 +78,9 @@
 
         <!-- Contact Us -->
         <div class="dropdown">
-          <button class="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-2.5 rounded-lg font-medium transition">
+          <button id="contact-btn" class="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-2.5 rounded-lg font-medium transition">
             <i class="fas fa-headset"></i>
-            <span>Contact Us</span>
+            <span id="contact-text">Contact Us</span>
           </button>
           <div class="dropdown-content">
             <a href="https://wa.me/8615237124896" target="_blank" class="flex items-center gap-3 px-6 py-4 hover:bg-gray-50 border-b">
@@ -198,6 +206,7 @@
         document.getElementById('stat4-value').innerHTML = '全球';
         document.getElementById('stat4').innerHTML = '服务范围';
         document.getElementById('brands-title').innerHTML = '合作品牌';
+        document.getElementById('contact-text').innerHTML = '联系我们';
       } 
       else if (lang === 'en') {
         document.getElementById('slogan').innerHTML = 'Drive the World, Easy Global Mobility';
@@ -217,6 +226,7 @@
         document.getElementById('stat4-value').innerHTML = 'Global';
         document.getElementById('stat4').innerHTML = 'Service Range';
         document.getElementById('brands-title').innerHTML = 'Our Brands';
+        document.getElementById('contact-text').innerHTML = 'Contact Us';
       } 
       else if (lang === 'ru') {
         document.getElementById('slogan').innerHTML = 'Автомобили по всему миру — легко и глобально';
@@ -236,6 +246,7 @@
         document.getElementById('stat4-value').innerHTML = 'Глобальный';
         document.getElementById('stat4').innerHTML = 'Охват';
         document.getElementById('brands-title').innerHTML = 'Наши бренды';
+        document.getElementById('contact-text').innerHTML = 'Связаться с нами';
       } 
       else if (lang === 'fr') {
         document.getElementById('slogan').innerHTML = 'Conduisez le monde, mobilité globale facile';
@@ -255,6 +266,7 @@
         document.getElementById('stat4-value').innerHTML = 'Mondiale';
         document.getElementById('stat4').innerHTML = 'Portée';
         document.getElementById('brands-title').innerHTML = 'Nos marques';
+        document.getElementById('contact-text').innerHTML = 'Contactez-nous';
       }
     }
 
