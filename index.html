@@ -6,15 +6,8 @@
   
   <!-- SEO -->
   <title>EzAuto | 车易行 - International Automobile Trade & Export</title>
-  <meta name="description" content="EzAuto (车易行) - Professional international automobile trade company from China. Export of new cars and used cars (автомобили с пробегом). Reliable partner for global dealers.">
-  <meta name="keywords" content="car export, used car export, Chinese car export, new car export, EzAuto, 车易行, automobile trade, Great Wall, Chery, Dongfeng">
-  <meta name="author" content="EzAuto">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="EzAuto | 车易行 - International Automobile Trade">
-  <meta property="og:description" content="Professional exporter of new and used vehicles from China. Your reliable global partner.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://picsum.photos/1200/630?cars">
+  <meta name="description" content="EzAuto (车易行) - Professional international automobile trade company from China. Export of new cars and used cars.">
+  <meta name="keywords" content="car export, used car export, Chinese car export, EzAuto, 车易行">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -75,7 +68,7 @@
           </div>
         </div>
 
-        <!-- Contact Us Dropdown -->
+        <!-- Contact Us -->
         <div class="dropdown">
           <button class="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-2.5 rounded-lg font-medium transition">
             <i class="fas fa-headset"></i>
@@ -128,9 +121,7 @@
   <section id="about" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
       <h2 id="about-title" class="text-4xl font-bold text-center mb-12 text-blue-900">About Us</h2>
-      <div id="about-text" class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-        EZ-AUTO Automobile Import and Export (Henan) Co., Ltd. was founded in 2017 and is headquartered in Henan Province. We specialize in multi-brand vehicle operations, complete vehicle sales, after-sales service, warehousing & logistics, and international trade.
-      </div>
+      <div id="about-text" class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed"></div>
     </div>
   </section>
 
@@ -152,8 +143,8 @@
           <div id="stat3" class="text-xl font-medium">Year Established</div>
         </div>
         <div class="stat-card bg-white border border-gray-100 rounded-2xl p-8 text-center">
-          <div class="text-5xl font-bold text-blue-600 mb-3">3</div>
-          <div id="stat4" class="text-xl font-medium">Service Cities</div>
+          <div class="text-5xl font-bold text-blue-600 mb-3">Global</div>
+          <div id="stat4" class="text-xl font-medium">Service Range</div>
         </div>
       </div>
     </div>
@@ -174,24 +165,16 @@
     </div>
   </section>
 
-  <!-- 联系我们（备用） -->
-  <section id="contact" class="py-20 bg-blue-900 text-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 id="contact-title" class="text-4xl font-bold mb-12">Contact Us</h2>
-      <p class="text-xl">Hover over the "Contact Us" button in the navigation bar to see all contact methods.</p>
-    </div>
-  </section>
-
   <footer class="bg-gray-900 text-gray-400 py-10 text-center">
     <p>© 2026 EzAuto | 车易行 All Rights Reserved</p>
   </footer>
 
   <script>
-    // Language Dropdown
     function toggleLangDropdown() {
       const dropdown = document.getElementById('lang-dropdown');
       dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     }
+
     function closeLangDropdown() {
       document.getElementById('lang-dropdown').style.display = 'none';
     }
@@ -204,46 +187,73 @@
         document.getElementById('slogan').innerHTML = '车行天下，易行全球';
         document.getElementById('slogan-sub').innerHTML = '您的可靠全球汽车贸易伙伴';
         document.getElementById('about-title').innerHTML = '关于我们';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">车易行汽车进出口（河南）有限公司成立于2017年，总部位于河南。</p>
+          <p class="mb-6">公司专注于多品牌汽车运营、整车销售、售后服务、仓储物流及国际贸易。</p>
+          <p class="mb-6">主要品牌：长城、奇瑞、东风（岚图、猛士、奕派）。</p>
+          <p class="mb-6">年均销量4560台，年均销售额6.5亿元，年均利润0.97亿元。</p>
+          <p>服务范围覆盖全球，为全球客户提供专业汽车贸易解决方案。</p>
+        `;
         document.getElementById('achievements-title').innerHTML = '我们的成就';
         document.getElementById('stat1').innerHTML = '年均销量车辆';
         document.getElementById('stat2').innerHTML = '年均销售额 (人民币)';
         document.getElementById('stat3').innerHTML = '成立年份';
-        document.getElementById('stat4').innerHTML = '服务城市';
+        document.getElementById('stat4').innerHTML = '服务范围';
         document.getElementById('brands-title').innerHTML = '合作品牌';
-        document.getElementById('contact-title').innerHTML = '联系我们';
-      } else if (lang === 'en') {
+      } 
+      else if (lang === 'en') {
         document.getElementById('slogan').innerHTML = 'Drive the World, Easy Global Mobility';
         document.getElementById('slogan-sub').innerHTML = 'Your Reliable Global Auto Trade Partner';
         document.getElementById('about-title').innerHTML = 'About Us';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">EZ-AUTO Automobile Import and Export (Henan) Co., Ltd. was founded in 2017 and is headquartered in Henan Province.</p>
+          <p class="mb-6">We specialize in multi-brand vehicle operations, complete vehicle sales, after-sales service, warehousing & logistics, and international trade.</p>
+          <p class="mb-6">Main brands: Great Wall, Chery, Dongfeng (Voyah, M-Hero, Yipai).</p>
+          <p class="mb-6">Annual sales: 4,560 units | Revenue: 650 million RMB | Profit: 97 million RMB.</p>
+          <p>Our service covers the global market, providing professional automobile trade solutions for customers worldwide.</p>
+        `;
         document.getElementById('achievements-title').innerHTML = 'Our Achievements';
         document.getElementById('stat1').innerHTML = 'Vehicles Sold Annually';
         document.getElementById('stat2').innerHTML = 'Annual Revenue (RMB)';
         document.getElementById('stat3').innerHTML = 'Year Established';
-        document.getElementById('stat4').innerHTML = 'Service Cities';
+        document.getElementById('stat4').innerHTML = 'Global Service Range';
         document.getElementById('brands-title').innerHTML = 'Our Brands';
-        document.getElementById('contact-title').innerHTML = 'Contact Us';
-      } else if (lang === 'ru') {
+      } 
+      else if (lang === 'ru') {
         document.getElementById('slogan').innerHTML = 'Автомобили по всему миру — легко и глобально';
         document.getElementById('slogan-sub').innerHTML = 'Ваш надежный глобальный партнер в автомобильной торговле';
         document.getElementById('about-title').innerHTML = 'О компании';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">Компания ООО «EZ-AUTO Автомобильный Импорт и Экспорт (Хэнань)» основана в 2017 году в провинции Хэнань.</p>
+          <p class="mb-6">Мы специализируемся на мультибрендовой торговле автомобилями, продаже новых автомобилей и автомобилей с пробегом, послепродажном обслуживании, складской логистике и международной торговле.</p>
+          <p class="mb-6">Основные бренды: Great Wall, Chery, Dongfeng (Voyah, M-Hero, Yipai).</p>
+          <p class="mb-6">Среднегодовые показатели: 4560 автомобилей, выручка 650 млн юаней, прибыль 97 млн юаней.</p>
+          <p>Наш сервис охватывает глобальный рынок.</p>
+        `;
         document.getElementById('achievements-title').innerHTML = 'Наши достижения';
         document.getElementById('stat1').innerHTML = 'Продано автомобилей в год';
-        document.getElementById('stat2').innerHTML = 'Годовой оборот (млн юаней)';
+        document.getElementById('stat2').innerHTML = 'Годовой оборот';
         document.getElementById('stat3').innerHTML = 'Год основания';
-        document.getElementById('stat4').innerHTML = 'Города обслуживания';
+        document.getElementById('stat4').innerHTML = 'Глобальный охват';
         document.getElementById('brands-title').innerHTML = 'Наши бренды';
-        document.getElementById('contact-title').innerHTML = 'Контакты';
-      } else if (lang === 'fr') {
+      } 
+      else if (lang === 'fr') {
         document.getElementById('slogan').innerHTML = 'Conduisez le monde, mobilité globale facile';
         document.getElementById('slogan-sub').innerHTML = 'Votre partenaire fiable dans le commerce automobile international';
         document.getElementById('about-title').innerHTML = 'À propos de nous';
+        document.getElementById('about-text').innerHTML = `
+          <p class="mb-6">La société EZ-AUTO Import et Export Automobile (Henan) Co., Ltd. a été fondée en 2017 et a son siège social dans la province du Henan.</p>
+          <p class="mb-6">Nous nous spécialisons dans le commerce multi-marques, la vente de véhicules neufs et d'occasion, le service après-vente, la logistique et le commerce international automobile.</p>
+          <p class="mb-6">Principales marques : Great Wall, Chery, Dongfeng (Voyah, M-Hero, Yipai).</p>
+          <p class="mb-6">Ventes annuelles : 4560 véhicules | Chiffre d'affaires : 650 millions RMB | Bénéfice : 97 millions RMB.</p>
+          <p>Notre service couvre le marché mondial.</p>
+        `;
         document.getElementById('achievements-title').innerHTML = 'Nos Réalisations';
         document.getElementById('stat1').innerHTML = 'Véhicules vendus par an';
         document.getElementById('stat2').innerHTML = 'Chiffre d\'affaires annuel';
         document.getElementById('stat3').innerHTML = 'Année de création';
-        document.getElementById('stat4').innerHTML = 'Villes de service';
+        document.getElementById('stat4').innerHTML = 'Portée mondiale';
         document.getElementById('brands-title').innerHTML = 'Nos marques';
-        document.getElementById('contact-title').innerHTML = 'Contactez-nous';
       }
     }
 
@@ -253,7 +263,6 @@
       }
     });
 
-    // 默认 English
     window.onload = () => switchLang('en');
   </script>
 </body>
