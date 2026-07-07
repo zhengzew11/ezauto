@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EzAuto | 车易行 - 国际汽车贸易</title>
+  <title>EzAuto | Cheyixing - International Automobile Trade</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
@@ -24,7 +24,7 @@
       border-radius: 8px;
       overflow: hidden;
       z-index: 50;
-      min-width: 140px;
+      min-width: 160px;
     }
     .dropdown:hover .dropdown-content {
       display: block;
@@ -45,7 +45,7 @@
       <div class="dropdown">
         <button onclick="toggleDropdown()" 
                 class="flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-gray-100 font-medium">
-          <span id="current-lang">中文</span>
+          <span id="current-lang">English</span>
           <i class="fas fa-chevron-down text-sm"></i>
         </button>
         
@@ -62,16 +62,16 @@
   <!-- 英雄区 -->
   <section id="home" class="hero h-screen flex items-center text-white pt-20">
     <div class="max-w-6xl mx-auto text-center px-6">
-      <h2 id="slogan" class="text-5xl md:text-7xl font-bold mb-6">车行天下，易行全球</h2>
-      <p id="slogan-sub" class="text-2xl mb-10">您的可靠全球汽车贸易伙伴</p>
-      <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-12 py-5 rounded-full text-xl font-semibold">立即咨询</a>
+      <h2 id="slogan" class="text-5xl md:text-7xl font-bold mb-6">Drive the World, Easy Global Mobility</h2>
+      <p id="slogan-sub" class="text-2xl mb-10">Your Reliable Global Auto Trade Partner</p>
+      <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white px-12 py-5 rounded-full text-xl font-semibold">Contact Us Now</a>
     </div>
   </section>
 
   <!-- 关于我们 -->
   <section id="about" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 id="about-title" class="text-4xl font-bold text-center mb-12 text-blue-900">关于我们</h2>
+      <h2 id="about-title" class="text-4xl font-bold text-center mb-12 text-blue-900">About Us</h2>
       <div id="about-text" class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed"></div>
     </div>
   </section>
@@ -79,7 +79,7 @@
   <!-- 主要品牌 -->
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 id="brands-title" class="text-4xl font-bold text-center mb-12 text-blue-900">合作品牌</h2>
+      <h2 id="brands-title" class="text-4xl font-bold text-center mb-12 text-blue-900">Our Brands</h2>
       <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center">
         <div class="font-semibold">Great Wall</div>
         <div class="font-semibold">Chery</div>
@@ -94,14 +94,14 @@
   <!-- 联系我们 -->
   <section id="contact" class="py-20 bg-blue-900 text-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 id="contact-title" class="text-4xl font-bold mb-12">联系我们</h2>
+      <h2 id="contact-title" class="text-4xl font-bold mb-12">Contact Us</h2>
       <div class="grid md:grid-cols-2 gap-12 text-left max-w-2xl mx-auto">
         <div>
           <p class="mb-6"><i class="fas fa-whatsapp text-2xl mr-4"></i> <strong>WhatsApp：</strong> +86 152 3712 4896</p>
           <p class="mb-6"><i class="fas fa-envelope text-2xl mr-4"></i> <strong>Email：</strong> info@ezauto.cn</p>
         </div>
         <div>
-          <p class="mb-6"><i class="fas fa-map-marker-alt text-2xl mr-4"></i> <strong>地址：</strong> 中国河南郑州</p>
+          <p class="mb-6"><i class="fas fa-map-marker-alt text-2xl mr-4"></i> <strong>Address：</strong> Zhengzhou, Henan, China</p>
           <p><i class="fab fa-telegram text-2xl mr-4"></i> <strong>Telegram：</strong> 
             <a href="https://t.me/EzAutoExport" target="_blank" class="underline hover:text-orange-400">t.me/EzAutoExport</a>
           </p>
@@ -125,7 +125,6 @@
     }
 
     function switchLang(lang) {
-      // 更新当前语言显示
       const langNames = {
         'zh': '中文',
         'en': 'English',
@@ -191,14 +190,14 @@
       }
     }
 
-    // 点击页面其他地方关闭下拉菜单
     document.addEventListener('click', function(event) {
       if (!event.target.closest('.dropdown')) {
         document.getElementById('lang-dropdown').style.display = 'none';
       }
     });
 
-    window.onload = () => switchLang('zh');
+    // 默认语言设置为 English
+    window.onload = () => switchLang('en');
   </script>
 </body>
 </html>
