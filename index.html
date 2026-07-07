@@ -106,7 +106,7 @@
     </div>
   </nav>
 
-  <!-- 英雄区（已移除按钮） -->
+  <!-- 英雄区 -->
   <section id="home" class="hero h-screen flex items-center text-white pt-20">
     <div class="max-w-6xl mx-auto text-center px-6">
       <h2 id="slogan" class="text-5xl md:text-7xl font-bold mb-6">Drive the World, Easy Global Mobility</h2>
@@ -140,7 +140,7 @@
           <div id="stat3" class="text-xl font-medium">Year Established</div>
         </div>
         <div class="stat-card bg-white border border-gray-100 rounded-2xl p-8 text-center">
-          <div class="text-5xl font-bold text-blue-600 mb-3">Global</div>
+          <div class="text-5xl font-bold text-blue-600 mb-3" id="stat4-value">Global</div>
           <div id="stat4" class="text-xl font-medium">Service Range</div>
         </div>
       </div>
@@ -195,6 +195,7 @@
         document.getElementById('stat1').innerHTML = '年均销量车辆';
         document.getElementById('stat2').innerHTML = '年均销售额 (人民币)';
         document.getElementById('stat3').innerHTML = '成立年份';
+        document.getElementById('stat4-value').innerHTML = '全球';
         document.getElementById('stat4').innerHTML = '服务范围';
         document.getElementById('brands-title').innerHTML = '合作品牌';
       } 
@@ -207,13 +208,14 @@
           <p class="mb-6">We specialize in multi-brand vehicle operations, complete vehicle sales, after-sales service, warehousing & logistics, and international trade.</p>
           <p class="mb-6">Main brands: Great Wall, Chery, Dongfeng (Voyah, M-Hero, Yipai).</p>
           <p class="mb-6">Annual sales: 4,560 units | Revenue: 650 million RMB | Profit: 97 million RMB.</p>
-          <p>Our service covers the global market, providing professional automobile trade solutions for customers worldwide.</p>
+          <p>Our service covers the global market.</p>
         `;
         document.getElementById('achievements-title').innerHTML = 'Our Achievements';
         document.getElementById('stat1').innerHTML = 'Vehicles Sold Annually';
         document.getElementById('stat2').innerHTML = 'Annual Revenue (RMB)';
         document.getElementById('stat3').innerHTML = 'Year Established';
-        document.getElementById('stat4').innerHTML = 'Global Service Range';
+        document.getElementById('stat4-value').innerHTML = 'Global';
+        document.getElementById('stat4').innerHTML = 'Service Range';
         document.getElementById('brands-title').innerHTML = 'Our Brands';
       } 
       else if (lang === 'ru') {
@@ -231,7 +233,8 @@
         document.getElementById('stat1').innerHTML = 'Продано автомобилей в год';
         document.getElementById('stat2').innerHTML = 'Годовой оборот';
         document.getElementById('stat3').innerHTML = 'Год основания';
-        document.getElementById('stat4').innerHTML = 'Глобальный охват';
+        document.getElementById('stat4-value').innerHTML = 'Глобальный';
+        document.getElementById('stat4').innerHTML = 'Охват';
         document.getElementById('brands-title').innerHTML = 'Наши бренды';
       } 
       else if (lang === 'fr') {
@@ -249,7 +252,8 @@
         document.getElementById('stat1').innerHTML = 'Véhicules vendus par an';
         document.getElementById('stat2').innerHTML = 'Chiffre d\'affaires annuel';
         document.getElementById('stat3').innerHTML = 'Année de création';
-        document.getElementById('stat4').innerHTML = 'Portée mondiale';
+        document.getElementById('stat4-value').innerHTML = 'Mondiale';
+        document.getElementById('stat4').innerHTML = 'Portée';
         document.getElementById('brands-title').innerHTML = 'Nos marques';
       }
     }
