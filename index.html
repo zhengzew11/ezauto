@@ -3,13 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EzAuto | 车易行 - International Automobile Trade</title>
+  <title>EzAuto | 车易行 - 国际汽车贸易</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     .hero { 
       background: linear-gradient(rgba(0, 40, 85, 0.85), rgba(0, 40, 85, 0.85)), 
                   url('https://picsum.photos/1920/1080?cars') center/cover; 
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      background-color: white;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 50;
+      min-width: 140px;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
   </style>
 </head>
@@ -23,11 +41,20 @@
         <h1 class="text-2xl font-bold text-blue-900">车易行</h1>
       </div>
       
-      <div class="flex gap-2 text-sm font-medium">
-        <button onclick="switchLang('zh')" class="lang-btn px-4 py-2 rounded-lg hover:bg-blue-100 active">中文</button>
-        <button onclick="switchLang('en')" class="lang-btn px-4 py-2 rounded-lg hover:bg-blue-100">EN</button>
-        <button onclick="switchLang('ru')" class="lang-btn px-4 py-2 rounded-lg hover:bg-blue-100">RU</button>
-        <button onclick="switchLang('fr')" class="lang-btn px-4 py-2 rounded-lg hover:bg-blue-100">FR</button>
+      <!-- Language Dropdown -->
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" 
+                class="flex items-center gap-2 px-5 py-2.5 rounded-lg hover:bg-gray-100 font-medium">
+          <span id="current-lang">中文</span>
+          <i class="fas fa-chevron-down text-sm"></i>
+        </button>
+        
+        <div id="lang-dropdown" class="dropdown-content">
+          <a href="#" onclick="switchLang('zh'); closeDropdown()" class="block px-6 py-3 hover:bg-gray-100">中文 (ZH)</a>
+          <a href="#" onclick="switchLang('en'); closeDropdown()" class="block px-6 py-3 hover:bg-gray-100">English (EN)</a>
+          <a href="#" onclick="switchLang('ru'); closeDropdown()" class="block px-6 py-3 hover:bg-gray-100">Русский (RU)</a>
+          <a href="#" onclick="switchLang('fr'); closeDropdown()" class="block px-6 py-3 hover:bg-gray-100">Français (FR)</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -88,8 +115,24 @@
   </footer>
 
   <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('lang-dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function closeDropdown() {
+      document.getElementById('lang-dropdown').style.display = 'none';
+    }
+
     function switchLang(lang) {
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active', 'bg-blue-100'));
+      // 更新当前语言显示
+      const langNames = {
+        'zh': '中文',
+        'en': 'English',
+        'ru': 'Русский',
+        'fr': 'Français'
+      };
+      document.getElementById('current-lang').innerHTML = langNames[lang];
 
       if (lang === 'zh') {
         document.getElementById('slogan').innerHTML = '车行天下，易行全球';
@@ -147,6 +190,13 @@
         document.getElementById('contact-title').innerHTML = 'Contactez-nous';
       }
     }
+
+    // 点击页面其他地方关闭下拉菜单
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.dropdown')) {
+        document.getElementById('lang-dropdown').style.display = 'none';
+      }
+    });
 
     window.onload = () => switchLang('zh');
   </script>
