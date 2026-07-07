@@ -41,16 +41,22 @@
     .stat-card:hover {
       transform: translateY(-8px);
     }
-    /* 强制缩小俄语和法语的长单词 */
+    /* 成就数据第四栏优化 - 解决 Глобальный 和 Mondiale 超出问题 */
     #stat4-value {
       font-size: 2.1rem;
       line-height: 1.1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      text-align: center;
+      padding: 0 8px;
     }
     .ru #stat4-value {
-      font-size: 1.65rem !important;
+      font-size: 1.52rem !important;
     }
     .fr #stat4-value {
-      font-size: 1.85rem !important;
+      font-size: 1.72rem !important;
     }
   </style>
 </head>
