@@ -6,7 +6,7 @@
   
   <!-- SEO -->
   <title>EzAuto | 车易行 - International Automobile Trade & Export</title>
-  <meta name="description" content="EzAuto (车易行) - Professional international automobile trade company from China. Export of new cars and used cars.">
+  <meta name="description" content="EzAuto (车易行) - Professional international automobile trade company from China. Export of new cars and used cars (автомобили с пробегом). Reliable partner for global dealers.">
   <meta name="keywords" content="car export, used car export, Chinese car export, EzAuto, 车易行">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,7 +41,6 @@
     .stat-card:hover {
       transform: translateY(-8px);
     }
-    /* 成就数据第四栏优化 - 解决 Глобальный 和 Mondiale 超出问题 */
     #stat4-value {
       font-size: 2.1rem;
       line-height: 1.1;
@@ -164,8 +163,52 @@
     </div>
   </section>
 
+  <!-- 热销车型 -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 id="vehicles-title" class="text-4xl font-bold text-center mb-12 text-blue-900">Featured Vehicles</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="https://picsum.photos/600/400?h6" alt="Haval H6" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-1">Great Wall Haval H6</h3>
+            <p class="text-gray-500 text-sm mb-4">New Energy SUV</p>
+            <div class="flex justify-between items-end">
+              <span class="text-2xl font-bold text-blue-600">¥128,000</span>
+              <a href="https://wa.me/8615237124896" target="_blank" class="text-blue-600 hover:underline text-sm font-medium">Inquiry →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="https://picsum.photos/600/400?arrizo" alt="Arrizo 8" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-1">Chery Arrizo 8</h3>
+            <p class="text-gray-500 text-sm mb-4">Luxury Sedan</p>
+            <div class="flex justify-between items-end">
+              <span class="text-2xl font-bold text-blue-600">¥98,000</span>
+              <a href="https://wa.me/8615237124896" target="_blank" class="text-blue-600 hover:underline text-sm font-medium">Inquiry →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition">
+          <img src="https://picsum.photos/600/400?voyah" alt="Voyah Free" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-1">Voyah Free</h3>
+            <p class="text-gray-500 text-sm mb-4">Electric Luxury SUV</p>
+            <div class="flex justify-between items-end">
+              <span class="text-2xl font-bold text-blue-600">¥258,000</span>
+              <a href="https://wa.me/8615237124896" target="_blank" class="text-blue-600 hover:underline text-sm font-medium">Inquiry →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 主要品牌 -->
-  <section class="py-16 bg-gray-50">
+  <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <h2 id="brands-title" class="text-4xl font-bold text-center mb-12 text-blue-900">Our Brands</h2>
       <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-center">
@@ -209,11 +252,7 @@
           <p>服务范围覆盖全球，为全球客户提供专业汽车贸易解决方案。</p>
         `;
         document.getElementById('achievements-title').innerHTML = '我们的成就';
-        document.getElementById('stat1').innerHTML = '年均销量车辆';
-        document.getElementById('stat2').innerHTML = '年均销售额 (人民币)';
-        document.getElementById('stat3').innerHTML = '成立年份';
-        document.getElementById('stat4-value').innerHTML = '全球';
-        document.getElementById('stat4').innerHTML = '服务范围';
+        document.getElementById('vehicles-title').innerHTML = '热销车型';
         document.getElementById('brands-title').innerHTML = '合作品牌';
         document.getElementById('contact-text').innerHTML = '联系我们';
       } 
@@ -229,11 +268,7 @@
           <p>Our service covers the global market.</p>
         `;
         document.getElementById('achievements-title').innerHTML = 'Our Achievements';
-        document.getElementById('stat1').innerHTML = 'Vehicles Sold Annually';
-        document.getElementById('stat2').innerHTML = 'Annual Revenue (RMB)';
-        document.getElementById('stat3').innerHTML = 'Year Established';
-        document.getElementById('stat4-value').innerHTML = 'Global';
-        document.getElementById('stat4').innerHTML = 'Service Range';
+        document.getElementById('vehicles-title').innerHTML = 'Featured Vehicles';
         document.getElementById('brands-title').innerHTML = 'Our Brands';
         document.getElementById('contact-text').innerHTML = 'Contact Us';
       } 
@@ -249,11 +284,7 @@
           <p>Наш сервис охватывает глобальный рынок.</p>
         `;
         document.getElementById('achievements-title').innerHTML = 'Наши достижения';
-        document.getElementById('stat1').innerHTML = 'Продано автомобилей в год';
-        document.getElementById('stat2').innerHTML = 'Годовой оборот';
-        document.getElementById('stat3').innerHTML = 'Год основания';
-        document.getElementById('stat4-value').innerHTML = 'Глобальный';
-        document.getElementById('stat4').innerHTML = 'Охват';
+        document.getElementById('vehicles-title').innerHTML = 'Популярные модели';
         document.getElementById('brands-title').innerHTML = 'Наши бренды';
         document.getElementById('contact-text').innerHTML = 'Связаться с нами';
       } 
@@ -269,11 +300,7 @@
           <p>Notre service couvre le marché mondial.</p>
         `;
         document.getElementById('achievements-title').innerHTML = 'Nos Réalisations';
-        document.getElementById('stat1').innerHTML = 'Véhicules vendus par an';
-        document.getElementById('stat2').innerHTML = 'Chiffre d\'affaires annuel';
-        document.getElementById('stat3').innerHTML = 'Année de création';
-        document.getElementById('stat4-value').innerHTML = 'Mondiale';
-        document.getElementById('stat4').innerHTML = 'Portée';
+        document.getElementById('vehicles-title').innerHTML = 'Véhicules en vedette';
         document.getElementById('brands-title').innerHTML = 'Nos marques';
         document.getElementById('contact-text').innerHTML = 'Contactez-nous';
       }
